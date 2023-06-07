@@ -1,10 +1,10 @@
 <?php
-function connexion ($base){
+function connexion (){
 include_once("myparam.inc.php");
 //Connexionauserveur
 $idcom=@mysqli_connect(MYHOST,MYUSER,MYPASS);
 //Choixdelabase
-$idbase=@mysqli_select_db($idcom, $base);
+$idbase=@mysqli_select_db($idcom, 'web');
 //Affichaged�unmessageencasd�erreurs
 if(!$idcom|!$idbase)
 {
