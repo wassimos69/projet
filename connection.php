@@ -4,7 +4,7 @@ include_once("myparam.inc.php");
 //Connexionauserveur
 $idcom=@mysqli_connect(MYHOST,MYUSER,MYPASS);
 //Choixdelabase
-$idbase=@mysql_select_db($idcom, 'web');
+$idbase=@mysqli_select_db($idcom, 'web');
 //Affichaged�unmessageencasd�erreurs
 if(!$idcom|!$idbase)
 {
