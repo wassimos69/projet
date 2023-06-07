@@ -2,7 +2,7 @@
 function connexion (){
 include_once("myparam.inc.php");
 //Connexionauserveur
-$idcom=@mysql_connect(MYHOST,MYUSER,MYPASS);
+$idcom=@mysqli_connect(MYHOST,MYUSER,MYPASS);
 //Choixdelabase
 $idbase=@mysql_select_db($idcom, 'web');
 //Affichaged�unmessageencasd�erreurs
