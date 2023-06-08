@@ -1,16 +1,24 @@
+
+
 <?php
-function connexion ($base){
-include_once("myparam.inc.php");
-//Connexionauserveur
-$idcom=@mysqli_connect(MYHOST,MYUSER,MYPASS);
-//Choixdelabase
-$idbase=@mysqli_select_db($idcom, $base);
-//Affichaged�unmessageencasd�erreurs
-if(!$idcom|!$idbase)
-{
-echo"<script type=text/javascript>";
-echo "alert('Connexion Impossible � la base $base')</script>";
+function connexion(){
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,'web');
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
-//Fermeture de laconnexion
-return $idcom;}
+
+
+return $conn;
+}
+
+
+
+
 ?>
