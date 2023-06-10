@@ -18,7 +18,7 @@ if ($result!=null){
 $row = $result -> fetch_array(MYSQLI_ASSOC);
 
 if($row!=null && $row['type']=="cl"){
-header('Location: '.'https://www.facebook.com');}
+header('Location: '.'./client/home.html');}
 if($row!=null && $row['type']=="ad"){
     header('Location: '.'https://www.youtube.com');
 }
