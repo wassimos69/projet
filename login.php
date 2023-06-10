@@ -1,5 +1,6 @@
 <?php
 include('connection.php');
+
 $email=$_POST['email'];
 $pass=$_POST['password'];
 
@@ -11,31 +12,38 @@ $requete="select type from users where username='$email' and password='$pass'";
 
 
 $result=$idcom->query($requete);
-print_r($result);
-
-$result->num_rows;
 
 
-echo 'test';
+if ($result!=null){
+$row = $result -> fetch_array(MYSQLI_ASSOC);
 
-
-
-
-
-
-
-
-
+if($row!=null && $row['type']=="cl"){
+header('Location: '.'https://www.facebook.com');}
+if($row!=null && $row['type']=="ad"){
+    header('Location: '.'https://www.youtube.com');
+}
+else{
+$message='email or passwors invalid';
+}
 
 
 
-
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+include 'index.html';
 
 
 

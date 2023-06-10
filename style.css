@@ -31,6 +31,7 @@ body{
 	font-size: 35px;
 	font-weight: bold;
 	color: #130f40;
+	text-align: center;
 }
 .login_form{
 	padding: 20px 40px;
@@ -93,5 +94,6 @@ body{
 
 
 }
+
 
 
