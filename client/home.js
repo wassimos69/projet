@@ -1,7 +1,10 @@
 function myFunction(){
-var d=document.querySelector('categorie');
-if (d=="class")
-   window.location.href='www.facebook.com';
-else
-window.location.href='www.faceboceceok.com';
+    texte = document.getElementById("cat").options[document.getElementById('cat').selectedIndex].text;
+    console.log(texte);
+
+if (texte=='sport') 
+   window.location.href='cat1.html';
+   if (texte=='class') 
+   window.location.href='cat2.html';
+
 }

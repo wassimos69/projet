@@ -8,20 +8,24 @@
   <script src="home.js"></script>
   <header>
     <div class="logo">wassim's shop</div>
+  
     <nav>
       <ul>
         <li><a href="#">Accueil</a></li>
         <li><a href="#">Produits</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="/stagephp/monprojet/">deconnecte</a></li>
+        
       </ul>
+       <div class="box">
+        <select name="categorie" id="cat"  onchange="myFunction()">
+          <option value="">categorie</option>
+          <option value="sport" name="sport">sport</option>
+          <option value="class" name="class">class</option>
+          
+        </select>
     </nav>
-    <div class="box">
-    <select name="categorie" id="cat"  onchange="myFunction()">
-      <option value="">categorie</option>
-      <option value="sport">sport</option>
-      <option value="class">class</option>
-      
-    </select>
+   
     </div>
   </header>
 
