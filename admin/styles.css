@@ -54,7 +54,17 @@ h2 {
   }
   
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: 1%;
+    height: 300px;
+    width: 500px;
     margin-bottom: 20px;
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
   }
+  .products {
+    max-width:1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    }
