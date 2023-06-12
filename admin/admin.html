@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Dashboard CMS</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="pages.html">Pages</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Welcome <?php echo isset($admin_name) ? $admin_name : ''; ?>!</h2>
+    <p>Select a section from the navigation to manage content.</p>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 CMS Admin. All rights reserved.</p>
+  </footer>
+</body>
+</html>

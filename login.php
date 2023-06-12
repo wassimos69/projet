@@ -20,7 +20,9 @@ $row = $result -> fetch_array(MYSQLI_ASSOC);
 if($row!=null && $row['type']=="cl"){
 header('Location: '.'./client/home.html');}
 if($row!=null && $row['type']=="ad"){
-    header('Location: '.'https://www.youtube.com');
+    $admin_name=$email;
+    header('Location: '.'./admin/admin.html');
+    
 }
 else{
 $message='email or passwors invalid';
