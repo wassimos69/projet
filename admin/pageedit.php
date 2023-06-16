@@ -49,20 +49,25 @@
     
     
         $idcom=connexion();
-        $requete="select * from pages";
+        $requete="SELECT * FROM pages";
         $result=$idcom->query($requete);
+        var_dump($result);
+        
         if ($result!=null){
-            
+            echo"<form name=f onsubmit=edit.php>";
             echo"<table border='0'><tbody>";
                 echo"<tr><th>Id </th><th>titre</th> <th>action</th> ";
+                $row = $result -> fetch_array(MYSQLI_ASSOC);
+                var_dump($row);
              while($row = $result -> fetch_array(MYSQLI_ASSOC))
                     {echo"<tr>";
-                        foreach($ligne as $valeur){
-                            echo"<td>$valeur</td>";}
+                        foreach($row as $valeur){
+                             echo"<td>$valeur</td>";
+                             echo"<button type='submit'>edit</button> <button type='submit'>sup</button>"  ;  }
                 echo"</tr>";}
                 echo "</tbody></table>";
                  mysqli_free_result($result);
-    
+    echo"</form>";
     
         }
     
