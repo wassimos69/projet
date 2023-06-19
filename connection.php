@@ -1,5 +1,3 @@
-
-
 <?php
 function connexion(){
 $servername = "localhost";
@@ -11,7 +9,7 @@ $conn = new mysqli($servername, $username, $password,'web');
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  die("Connection failed:" . $conn->connect_error);
 }
 
 
