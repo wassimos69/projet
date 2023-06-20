@@ -1,13 +1,11 @@
 <?php   
 
-function sup(){
-
+function sup($id){
+  include('C:\wamp64\www\stagephp\monprojet\connection.php');
   $idcom=connexion();
-  $requete="";
+  $requete="delete from page where idpage=$id";
   $result=$idcom->query($requete);
-
-
-
+  
 }
 
 
@@ -49,6 +47,7 @@ function sup(){
   
   <main>
     <h2>Pages</h2>
+  
     
     <?php   
        
@@ -62,7 +61,7 @@ function sup(){
         
         
         if ($result!=null){
-            echo"<form name=f onsubmit=edit.php>";
+            echo"<form name=f method='post' action=pageedit.php>";
             echo"<table border='0'><tbody>";
                 echo"<tr><th>Id </th><th>titre</th> <th>action</th> ";
                 
@@ -70,7 +69,8 @@ function sup(){
                     {echo"<tr>";
                         foreach($row as $valeur){
                              echo"<td>$valeur</td>";
-                              } echo"<td><button type='submit'>edit</button> <button type='submit' action='sup()'>sup</button></td>"  ;
+                              } echo"<td>
+                              <button type='submit'>edit</button> <button type='submit' id=".$row['idpage']." onclick='verif(this.id,this)'>sup</button></td>"  ;
                 echo"</tr>";}
                 echo "</tbody></table>";
                  mysqli_free_result($result);
@@ -90,7 +90,9 @@ function sup(){
  
  
    </main>
-   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <script language="JavaScript" type="text/javascript" src="edit.js"></script>
    <footer>
      <p>&copy; 2023 CMS Admin. All rights reserved.</p>
    </footer>

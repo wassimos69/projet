@@ -2,7 +2,7 @@
 function connexion(){
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "root";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,'web');
