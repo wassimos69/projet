@@ -1,12 +1,6 @@
 <?php   
 
-function sup($id){
-  include('C:\wamp64\www\stagephp\monprojet\connection.php');
-  $idcom=connexion();
-  $requete="delete from page where idpage=$id";
-  $result=$idcom->query($requete);
-  
-}
+
 
 
 
@@ -61,7 +55,8 @@ function sup($id){
         
         
         if ($result!=null){
-            echo"<form name=f method='post' action=pageedit.php>";
+          
+            echo"<form name=f method='GET' action=action.php?page='page1'>";
             echo"<table border='0'><tbody>";
                 echo"<tr><th>Id </th><th>titre</th> <th>action</th> ";
                 
@@ -70,7 +65,8 @@ function sup($id){
                         foreach($row as $valeur){
                              echo"<td>$valeur</td>";
                               } echo"<td>
-                              <button type='submit'>edit</button> <button type='submit' id=".$row['idpage']." onclick='verif(this.id,this)'>sup</button></td>"  ;
+                              
+                              <button type='submit' id=".$row['idpage']." onclick='recup(this.id,this)' ><a href='edit.html'>edit</a></button>    <button type='submit' id=".$row['idpage']." onclick='verif(this.id,this)'>sup</button></td>"  ;
                 echo"</tr>";}
                 echo "</tbody></table>";
                  mysqli_free_result($result);
