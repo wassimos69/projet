@@ -4,7 +4,7 @@ include('C:\wamp64\www\stagephp\monprojet\connection.php');
   $titre=$_POST['title'];
   $contt=$_POST['cont'];
  
-
+  print_r($_POST);
   
     
 
@@ -22,7 +22,6 @@ include('C:\wamp64\www\stagephp\monprojet\connection.php');
 $response = "Traitement effectué avec succès";
 echo $response;
 
- 
   
   
   ?>

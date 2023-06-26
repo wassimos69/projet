@@ -44,13 +44,14 @@ function validate(){
       return false;
     }
     else{
+      
       var id = sessionStorage.getItem('idd');
-      alert (id);
+     
       localStorage.setItem("param1", id);
       $.ajax({
         url: "edit.php",
         type: "POST",
-        data: { param1: id }, 
+        data: { 'param1': id }, 
     
         success: function(response) {
          

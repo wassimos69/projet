@@ -42,7 +42,7 @@
   <main>
     <h2>Pages</h2>
   
-    
+    <button><a href="ajout.html"> crée une page </a></button>
     <?php   
        
      include('C:\wamp64\www\stagephp\monprojet\connection.php');

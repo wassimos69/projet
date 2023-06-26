@@ -20,7 +20,7 @@ $row = $result -> fetch_array(MYSQLI_ASSOC);
 
 
 if($row!=null && $row['type']=="cl"){
-header('Location: '.'./client/home.html');}
+header('Location: '.'./client/home.php');}
 if($row!=null && $row['type']=="ad"){
     $admin_name=$email;
     header('Location: '.'./admin/admin.html');

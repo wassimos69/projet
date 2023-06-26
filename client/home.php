@@ -8,15 +8,26 @@
   <script src="home.js"></script>
   <header>
     <div class="logo">wassim's shop</div>
-  
+  <form name="navbar">
+    
+   
     <nav>
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Produits</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul >
+      <?php
+     include('C:\wamp64\www\stagephp\monprojet\connection.php');
+     $idcom=connexion();  
+     $requete="SELECT nom FROM page";
+     $result=$idcom->query($requete);
+     while($row = $result -> fetch_array(MYSQLI_ASSOC))
+                 {
+                     foreach($row as $valeur){
+                          echo"<form method='GET' action='load.php?page=".$valeur."'><li><a  href='load.php?page=$valeur'>$valeur</a></li> </form>";
+                           }} ?>
+        
         <li><a href="/stagephp/monprojet/">deconnecte</a></li>
         
       </ul>
+    </form>
        <div class="box">
         <select name="categorie" id="cat"  onchange="myFunction()">
           <option value="">categorie</option>
